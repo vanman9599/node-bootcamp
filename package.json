@@ -1,0 +1,23 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanman9599/node-bootcamp.git"
+  },
+  "author": "van jordan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanman9599/node-bootcamp/issues"
+  },
+  "homepage": "https://github.com/vanman9599/node-bootcamp#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "lodash": "^4.17.21"
+  }
+}
