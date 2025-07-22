@@ -5,13 +5,13 @@ const express = require("express")
 const app = express();
 const tasks = require('./routes/tasks')
 const port = 3000
-
-
+const notFound = require('./middleware/not-found')
+const errorMiddleware = require('./middleware/error-handler')
+app.use(express.static('./public'))
 app.use(express.json())
 
-app.get('/hello', (req, res)=>{
-  res.send("Task Manager App")
-})
+
+
 
 app.use('/api/v1/tasks', tasks)
 const start = async () =>{
@@ -24,7 +24,8 @@ const start = async () =>{
     console.log(err)
   }
 }
-
+app.use(notFound)
+app.use(errorMiddleware)
 // app.get('/api/v1/tasks')
 // app.post('/api/v1/tasks')
 // app.get('/api/v1/tasks/:id')
